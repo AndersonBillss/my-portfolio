@@ -1,8 +1,14 @@
 import { useEffect } from "react"
 import Navbar from "./Navbar"
 import ProjectComponent from "./ProjectComponent"
+
+//images
 import MiHealthPng from "../img/MiHealth.png"
 import TailwindPng from "../img/Tailwind-project.png"
+import GolfScorePng from "../img/Golf-ScoreCard.png"
+import ReactGamePng from "../img/React-game-app.png"
+import ToDoListPng from "../img/ToDoList.png"
+import RegistrationAppPng from "../img/Registration-app.png"
 
 export default function Projects(){
     
@@ -50,39 +56,39 @@ export default function Projects(){
     const projects = [
         {
             title: 'MiHealth project',
-            description: 'I created this project early on in my Web Developement course to practice css',
+            description: 'I created this project early on in my Web Developement course to practice css.',
             link: 'https://andersonbillss.github.io/MiHealth/',
             img: MiHealthPng
         },
         {
             title: 'Tailwind Netflix project',
-            description: 'I created this project using scss and tailwind css. I followed a reference image',
-            link: 'https://andersonbillss.github.io/MiHealth/',
+            description: 'I created this project using scss and tailwind css.',
+            link: 'https://andersonbillss.github.io/tailwindProject/',
             img: TailwindPng
         },
         {
-            title: 'test',
-            description: 'I created this project using scss and tailwind css. I followed a reference image',
-            link: 'https://andersonbillss.github.io/MiHealth/',
-            img: MiHealthPng
+            title: 'Golf Score App',
+            description: 'This is a golf score app pulling from an api using vanilla javaScript.',
+            link: 'https://andersonbillss.github.io/Golf-Score-App/',
+            img: GolfScorePng
         },
         {
-            title: 'test',
-            description: 'I created this project using scss and tailwind css. I followed a reference image',
-            link: 'https://andersonbillss.github.io/MiHealth/',
-            img: MiHealthPng
+            title: 'To do list app',
+            description: 'This robust to do list app was created using vanilla javaScript',
+            link: 'https://andersonbillss.github.io/toDoListApp/',
+            img: ToDoListPng
         },
         {
-            title: 'test',
-            description: 'I created this project using scss and tailwind css. I followed a reference image',
-            link: 'https://andersonbillss.github.io/MiHealth/',
-            img: MiHealthPng
+            title: 'React Game App',
+            description: 'This is an react app with several games, displaying my ability to code complex logic systems.',
+            link: 'https://react-game-project-dxrwofvh4-anderson-bills-projects.vercel.app/',
+            img: ReactGamePng
         },
         {
-            title: 'test',
-            description: 'I created this project using scss and tailwind css. I followed a reference image',
-            link: 'https://andersonbillss.github.io/MiHealth/',
-            img: MiHealthPng
+            title: 'Registration App',
+            description: 'This is a robust registration app built using react. It uses a postgresql database and incorperates proper security protocols. I worked on this project in a group.',
+            link: 'https://capstone-co5w.onrender.com/',
+            img: RegistrationAppPng
         },
     ]
 

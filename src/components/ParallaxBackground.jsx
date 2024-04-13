@@ -34,9 +34,11 @@ export default function ParallaxBackground(props){
     }
     
     function handleScroll(){
-        const scrollTop = window.scrollY
-        const background = parallaxBackgroundRef.current
-        background.style.transform = `translate(0, ${scrollTop*parallax-imgTop*parallax}px)`
+        requestAnimationFrame(() => {
+            const scrollTop = window.scrollY;
+            const background = parallaxBackgroundRef.current;
+            background.style.transform = `translateY(${(scrollTop - imgTop) * parallax}px)`;
+        });
     }
     
     function imgFadeIn(){
