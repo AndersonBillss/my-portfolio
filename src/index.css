@@ -1,6 +1,5 @@
 
 :root{
-  --background-image-height: 500px;
 
   --main-background-color: rgb(66, 66, 66);
 
@@ -116,7 +115,7 @@ a{
   filter: brightness(90%);
 }
 
-.project-description  div  p{
+.project-description div *{
   width: 200px;
 }
 
@@ -125,26 +124,32 @@ a{
 }
 
 
-#home-background-container{
+
+
+img.fadeIn{
+  z-index: -2;
+}
+
+
+/* parallax background css */
+.parallax-background-container{
   position: relative;
   display: flex;
-  height: var(--background-image-height);
+  overflow: hidden;
+  max-height: 750px;
 }
-#home-background{
+.parallax-background{
   position: absolute;
   width: 100%;
   z-index: -1;
 
 }
-#home-background img{
+.parallax-background img{
   display: flex;
   width: 100%;
-  height: var(--background-image-height + 50px);
+  min-height: 500px;
   object-fit: cover;
-}
-
-img.fadeIn{
-  z-index: -2;
+  object-position: center
 }
 
 
