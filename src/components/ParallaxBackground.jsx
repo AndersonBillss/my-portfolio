@@ -34,31 +34,35 @@ export default function ParallaxBackground(props){
         imgTop = imgContainer.offsetTop
         const img = imgRef.current
         const windowHeight = window.innerHeight
-        const isSuddenWindowChange = windowHeight < prevWindowHeight.current - 30 || windowHeight > prevWindowHeight.current + 30
+        const isSuddenWindowChange = windowHeight < prevWindowHeight.current - 15 || windowHeight > prevWindowHeight.current + 15
         if(!isSuddenWindowChange){
+            const heightNeededToFitEntireImage = (imgContainer.offsetHeight+windowHeight) / 2 + 100
             const heightToWidthRatio = img.offsetHeight / img.offsetWidth
-            const containerHeightToWidthRatio = windowHeight / imgContainer.offsetWidth
+            const containerHeightToWidthRatio = heightNeededToFitEntireImage / imgContainer.offsetWidth
 
             if(heightToWidthRatio > containerHeightToWidthRatio){
                 const height = imgContainer.offsetWidth * heightToWidthRatio
                 img.style.height = `${height}px`
             } else {
-                const height = windowHeight
+                const height = heightNeededToFitEntireImage
                 img.style.height = `${height}px`
 
                 //center the image
                 img.style.transform = `translateX(${(window.innerWidth - img.offsetWidth) / 2}px)`
             }
+        } else {
+            console.log('sudden window change')
         }
         prevWindowHeight.current = windowHeight
     }
+
     
     function handleScroll(){
-        requestAnimationFrame(() => {
+        // requestAnimationFrame(() => {
             const scrollTop = window.scrollY;
             const background = parallaxBackgroundRef.current;
             background.style.transform = `translateY(${(scrollTop - imgTop) * parallax}px)`;
-        });
+        // });
     }
     
     function imgFadeIn(){

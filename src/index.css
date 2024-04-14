@@ -177,9 +177,8 @@ img.fadeIn{
 }
 .parallax-background{
   position: absolute;
-}
-.parallax-background img{
-  width: auto;
+  width: 100%;
+  z-index: -1;  
 }
 
 
