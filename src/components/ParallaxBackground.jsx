@@ -29,15 +29,26 @@ export default function ParallaxBackground(props){
     function handleWindowResize(){
         //reset the offset for the top of the image
         const imgContainer = parallaxBackgroundContainerRef.current
-        imgTop = imgContainer.offsetTop
 
+        //adjust image size with screen size
+        imgTop = imgContainer.offsetTop
         const img = imgRef.current
-        const imgHeight = img.offsetHeight
         const windowHeight = window.innerHeight
-        const height = imgHeight/parallax-windowHeight
         const isSuddenWindowChange = windowHeight < prevWindowHeight.current - 30 || windowHeight > prevWindowHeight.current + 30
         if(!isSuddenWindowChange){
-            imgContainer.style.height = `${height}px`
+            const heightToWidthRatio = img.offsetHeight / img.offsetWidth
+            const containerHeightToWidthRatio = windowHeight / imgContainer.offsetWidth
+
+            if(heightToWidthRatio > containerHeightToWidthRatio){
+                const height = imgContainer.offsetWidth * heightToWidthRatio
+                img.style.height = `${height}px`
+            } else {
+                const height = windowHeight
+                img.style.height = `${height}px`
+
+                //center the image
+                img.style.transform = `translateX(${(window.innerWidth - img.offsetWidth) / 2}px)`
+            }
         }
         prevWindowHeight.current = windowHeight
     }

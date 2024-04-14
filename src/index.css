@@ -7,6 +7,8 @@
   
   --card-background-color: rgb(13, 50, 23);
   --main-text-color: lightgray;
+
+  --project-height: 400px;
 }
 body{
   height: 100%;
@@ -52,7 +54,7 @@ a{
   border-radius: 5px;
   display: flex;
   width: 90vw;
-
+  overflow: hidden;
 }
 .project-top{
   display: flex;
@@ -85,20 +87,29 @@ a{
 }
 .project-description{
   padding: 15px 30px;
-  box-shadow: 0px 0px 5px 5px var(--card-background-color);
   z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .project-img{
+  position: relative;
   display: flex;
-  height: 50vh;
+  height: var(--project-height);
   flex-grow: 5;
   
   background-size: cover;
   background-position: left;  
 }
+.project-img-shadow{
+  position: absolute;
+  background-image: linear-gradient(to right,var(--card-background-color), rgba(0, 0, 0, 0));
+  transform: translate(-1px, -5px);
+  width: 20px;
+  height: calc(var(--project-height) + 10px);
+}
+
+
 .projectLink{
   width: 100px;
   text-align: center;
@@ -118,8 +129,35 @@ a{
   width: 200px;
 }
 
+
+.subject-list{
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+.subject-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  background-color: antiquewhite;
+}
+.subject-item div {
+  color: var(--card-background-color);
+  font-weight: bold;
+  border-bottom: 3px var(--card-background-color) solid;
+  margin-bottom: 5px;
+}
 .project-title{
   font-size: 48px;
+}
+.subject-logo{
+  height: 50px;
+  width: auto;
 }
 
 
@@ -135,20 +173,13 @@ img.fadeIn{
   position: relative;
   display: flex;
   overflow: hidden;
-  max-height: 600px;
+  height: 500px;
 }
 .parallax-background{
   position: absolute;
-  width: 100%;
-  z-index: -1;
-
 }
 .parallax-background img{
-  display: flex;
-  width: 100%;
-  min-height: 500px;
-  object-fit: cover;
-  object-position: center
+  width: auto;
 }
 
 
@@ -157,5 +188,60 @@ img.fadeIn{
     display: flex;
     flex-direction: column;
   }
+  .project-description{
+    align-items: center;
+  }
+  .project-description div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .project-description div *{
+    text-align: center;
+    margin: 0 15px;
+  }
+  .project-img-shadow{
+    background-image: linear-gradient(var(--card-background-color), rgba(0, 0, 0, 0));
+    transform: translate(-1px, -5px);
+    width: 100vw;
+    height: 20px;
+  }
+}
+
+@media(max-width: 650px) {
+  .subject-item{
+    padding: 10px 20px;
+    margin: 5px;
+  }
+  .subject-logo{
+    height: 30px;
+  }
+  .main-content{
+    padding: 15px;
+  }
   
+}
+@media(max-width: 500px) {
+  .nav{
+    flex-direction: column;
+    padding-bottom: 15px;
+  }
+  .project{
+    margin-top: 0;
+  }
+  .project-description div{
+    flex-direction: column;
+  }
+  .project-description div h1{
+    margin-bottom: 15px;
+  }
+
+}
+@media(max-width: 360px) {
+  .subject-item{
+    padding: 5px 10px;
+  }
+  .subject-item div{
+    font-size: 14px;
+  }
 }

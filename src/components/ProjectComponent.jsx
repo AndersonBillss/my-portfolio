@@ -13,7 +13,8 @@ export default function ProjectComponent( props ){
                 <a href={info.link} className="projectLink button">See Project</a>
             </div>
             <div className="project-img" style={{backgroundImage: `url(${info.img})`}}>
-                </div>
+                <div className="project-img-shadow"></div>
+            </div>
         </div>
     )
 }

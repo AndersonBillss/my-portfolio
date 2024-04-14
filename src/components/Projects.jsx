@@ -16,7 +16,7 @@ export default function Projects(){
         window.addEventListener('scroll', handleScroll)
         handleScroll()
     })
-    
+
     function handleScroll(){
         const elements = document.getElementById("fadeInElements").children
         fadeIn(elements)
@@ -29,7 +29,7 @@ export default function Projects(){
             const scrollBottom = scrollTop + window.innerHeight
 
             const elementTop = element.offsetTop
-            const elementBottom = elementTop + window.innerHeight/2
+            const elementBottom = elementTop + 400
             console.log()
             
 
