@@ -13,29 +13,18 @@ import RegistrationAppPng from "../img/Registration-app.png"
 export default function Projects(){
     
     useEffect(() => {
-        // window.addEventListener('load', handleLoad);
         window.addEventListener('scroll', handleScroll)
         handleScroll()
     })
+    
     function handleScroll(){
-        console.log('scrolling')
         const elements = document.getElementById("fadeInElements").children
         fadeIn(elements)
     }
 
-    // function handleLoad(){
-    //     const elements = document.getElementById("fadeInElements").children
-    //     fadeIn(elements)
-    //     window.removeEventListener('load', handleLoad) 
-    // }
-
     function fadeIn(elements){
         for(let i=0; i<elements.length; i++){
             const element = elements[i]  
-/*             setTimeout(() => {
-               element.classList.remove('fadeOut') 
-               element.classList.add('fadeIn')
-            }, (i*350)) */
             const scrollTop = window.scrollY
             const scrollBottom = scrollTop + window.innerHeight
 

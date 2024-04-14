@@ -6,6 +6,8 @@ export default function ParallaxBackground(props){
     const parallaxBackgroundRef = useRef(null);
     const parallaxBackgroundContainerRef = useRef(null);
 
+    const prevWindowHeight = useRef(window.innerHeight)
+
     const img = props.img
     let imgTop = 0
     const parallax = .5
@@ -18,7 +20,11 @@ export default function ParallaxBackground(props){
         window.addEventListener('scroll', handleScroll)
         window.addEventListener('resize', handleWindowResize)
 
-    })
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleWindowResize);
+        };
+    },[])
 
     function handleWindowResize(){
         //reset the offset for the top of the image
@@ -29,8 +35,11 @@ export default function ParallaxBackground(props){
         const imgHeight = img.offsetHeight
         const windowHeight = window.innerHeight
         const height = imgHeight/parallax-windowHeight
-
-        imgContainer.style.height = `${height}px`
+        const isSuddenWindowChange = windowHeight < prevWindowHeight.current - 30 || windowHeight > prevWindowHeight.current + 30
+        if(!isSuddenWindowChange){
+            imgContainer.style.height = `${height}px`
+        }
+        prevWindowHeight.current = windowHeight
     }
     
     function handleScroll(){

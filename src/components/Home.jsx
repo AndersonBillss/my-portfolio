@@ -10,74 +10,13 @@ export default function Home(){
 
             <div className="main-content">
                 <h1>About Me</h1>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>                 <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>                 <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p> 
+                <p>I am currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
             </div>
-            
             <ParallaxBackground img={backgroundImg}></ParallaxBackground>
 
             <div className="main-content">
                 <h1>About Me</h1>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <h1>About Me</h1>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <h1>About Me</h1>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <h1>About Me</h1>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <h1>About Me</h1>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <h1>About Me</h1>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <h1>About Me</h1>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <h1>About Me</h1>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
-                <p>I currently a student at Mtech (Mountainland Technical College). I am currently looking for an externship. You can contact me at anderson@thebillsfamily.com</p>
+                
             </div>
         </div>
     )
