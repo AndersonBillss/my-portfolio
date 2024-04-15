@@ -30,7 +30,6 @@ export default function Projects(){
 
             const elementTop = element.offsetTop
             const elementBottom = elementTop + 400
-            console.log()
             
 
             if(scrollBottom > elementBottom){
@@ -85,7 +84,7 @@ export default function Projects(){
         <div>
             <Navbar page="Projects"/>
             <div className="projects-page">
-            <h1 className="project-title">Projects</h1>
+            <h1 className="main-header">Projects</h1>
 
                 <div id='fadeInElements'>
                     {projects.map((project, index) => {

@@ -4,6 +4,7 @@
   --main-background-color: rgb(66, 66, 66);
 
   --nav-text-color: rgb(241, 240, 219);
+  --highlight-color: rgb(0, 252, 84);
   
   --card-background-color: rgb(13, 50, 23);
   --main-text-color: lightgray;
@@ -20,6 +21,10 @@ body{
 .main-content{
   padding: 50px;
   background-color: var(--main-background-color);
+}
+.main-header{
+  width: fit-content;
+  border-bottom: 3px var(--highlight-color) solid;
 }
 
 a{
@@ -78,7 +83,7 @@ a{
 }
 
 .selected-link{
-  border-bottom: 3px yellowgreen solid;
+  border-bottom: 3px var(--highlight-color) solid;
 }
 .projects-page{
   display: flex;
@@ -114,7 +119,7 @@ a{
   width: 100px;
   text-align: center;
   font-weight: bold;
-  background-color: rgb(0, 252, 84);
+  background-color: var(--highlight-color);
   color: black;
   border-radius: 5px;
   padding: 5px 10px;
@@ -127,6 +132,10 @@ a{
 
 .project-description div *{
   width: 200px;
+}
+.project-description div h1 {
+  border-bottom: 3px var(--highlight-color) solid;
+  padding-bottom: 15px;
 }
 
 
@@ -152,6 +161,7 @@ a{
   border-bottom: 3px var(--card-background-color) solid;
   margin-bottom: 5px;
 }
+
 .project-title{
   font-size: 48px;
 }
@@ -180,6 +190,22 @@ img.fadeIn{
   width: 100%;
   z-index: -1;  
 }
+.background-header-container{
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background-header{
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  margin: 15px;
+}
 
 
 @media(max-width: 800px) {
@@ -204,6 +230,11 @@ img.fadeIn{
     transform: translate(-1px, -5px);
     width: 100vw;
     height: 20px;
+  }
+  .project-description div h1 {
+    border-bottom: none;
+    border-right: 3px var(--highlight-color) solid;
+    padding-bottom: 0;
   }
 }
 
@@ -233,6 +264,12 @@ img.fadeIn{
   }
   .project-description div h1{
     margin-bottom: 15px;
+  }
+
+  .project-description div h1 {
+    border-right: none;
+    border-bottom: 3px var(--highlight-color) solid;
+    padding-bottom: 15px;
   }
 
 }

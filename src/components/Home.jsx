@@ -15,8 +15,39 @@ import NodePng from '../logos/node.png'
 import DockerPng from '../logos/docker.png'
 import KubernetesPng from '../logos/kubernetes.png'
 import AwsPng from '../logos/aws.png'
+import { useEffect, useRef } from "react"
 
 export default function Home(){
+    const listRef = useRef(null)
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll)
+        return() => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    },[])
+    function handleScroll(){
+        const listItems = document.getElementsByClassName("subject-item")
+        const windowBottom = window.scrollY + window.innerHeight
+
+        const list = listRef.current
+        const listBottom = list.offsetTop + list.offsetHeight
+
+        const listImg = listItems[0].querySelector("img")
+
+        if(windowBottom > listBottom && listImg.complete){
+            for(let i=0; i<listItems.length; i++){
+                const listItem = listItems[i]
+                setTimeout(() => {
+                    listItem.classList.remove("fadeOut")
+                    listItem.classList.add("fadeIn")
+                }, ((i+1)*400))
+            }
+            window.removeEventListener('scroll', handleScroll)
+        }
+
+    }
+
     const subjects = [
         {
             name: "Html",
@@ -63,32 +94,21 @@ export default function Home(){
     return(
         <div>
             <Navbar page="Home"/>
-            <p>placeholder</p>
-            <p>placeholder</p>
-            <p>placeholder</p>
-            <p>placeholder</p>
-            <p>placeholder</p>
-            <p>placeholder</p>
-            <p>placeholder</p>
-            <p>placeholder</p>
-            <p>placeholder</p>
-            <p>placeholder</p>
-            <p>placeholder</p>
 
-            <ParallaxBackground img={backgroundImg}></ParallaxBackground>
+            <ParallaxBackground text="Full Stack Web Developer" img={backgroundImg}></ParallaxBackground>
 
 
             <div className="main-content">
 
-                <h1>About Me</h1>
+                <h1 className="main-header">About Me</h1>
 
                 <p>I am currently a student at Mtech (Mountainland Technical College), enrolled in their Web Programming and Development course where industry professionals work with students. I spend 3 hours every school day in this program, and I spend time at home improving my skills. This program has taught me each of the following:</p>
 
-                <ul className="subject-list">
+                <ul ref={listRef} className="subject-list">
                     {
                         subjects.map((subject, index) => {
                             return(
-                                <li className="subject-item" key={index}>
+                                <li className="subject-item fadeOut" key={index}>
                                     <div>
                                         {subject.name}
                                     </div>

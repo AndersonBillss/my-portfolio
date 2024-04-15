@@ -6,9 +6,16 @@ export default function ParallaxBackground(props){
     const parallaxBackgroundRef = useRef(null);
     const parallaxBackgroundContainerRef = useRef(null);
 
+    const prevWindowWidth = useRef(window.innerWidth)
     const prevWindowHeight = useRef(window.innerHeight)
 
+    const heightToWidthRatio = useRef(null)
+
+    const imgHeight = useRef(0)
+
     const img = props.img
+    const text = props.text || undefined
+
     let imgTop = 0
     const parallax = .5
 
@@ -27,47 +34,55 @@ export default function ParallaxBackground(props){
     },[])
 
     function handleWindowResize(){
-        //reset the offset for the top of the image
-        const imgContainer = parallaxBackgroundContainerRef.current
-
-        //adjust image size with screen size
-        imgTop = imgContainer.offsetTop
-        const img = imgRef.current
         const windowHeight = window.innerHeight
         const windowChangeY = windowHeight != prevWindowHeight.current
 
-        if(!windowChangeY ){
+        //const windowChangeX = window.innerWidth > prevWindowWidth.current + 10 || window.innerWidth < prevWindowWidth.current - 10
+        const windowChangeX = window.innerWidth !== prevWindowWidth.current
+
+        if(!windowChangeY || windowChangeX){
+            const imgContainer = parallaxBackgroundContainerRef.current
+            imgTop = imgContainer.offsetTop
+            const img = imgRef.current
             const heightNeededToFitEntireImage = (imgContainer.offsetHeight+windowHeight) / 2 + 100
-            const heightToWidthRatio = img.offsetHeight / img.offsetWidth
+            
             const containerHeightToWidthRatio = heightNeededToFitEntireImage / imgContainer.offsetWidth
 
-            if(heightToWidthRatio > containerHeightToWidthRatio){
-                const height = imgContainer.offsetWidth * heightToWidthRatio
-                img.style.height = `${height}px`
+            if(heightToWidthRatio.current > containerHeightToWidthRatio){
+
+                parallaxBackgroundRef.current.style.width = `${imgContainer.offsetWidth}px`
+                imgRef.current.style.width = `${imgContainer.offsetWidth}px`
+                img.style.height = `auto`
+                img.style.transform = `translate(0px)`
+
             } else {
+
                 const height = heightNeededToFitEntireImage
                 img.style.height = `${height}px`
+                img.style.width = `auto`
 
                 //center the image
                 img.style.transform = `translateX(${(window.innerWidth - img.offsetWidth) / 2}px)`
             }
         }
         prevWindowHeight.current = windowHeight
+        prevWindowWidth.current = window.innerWidth
     }
 
     
     function handleScroll(){
-        // requestAnimationFrame(() => {
-            const scrollTop = window.scrollY;
-            const background = parallaxBackgroundRef.current;
-            background.style.transform = `translateY(${(scrollTop - imgTop) * parallax}px)`;
-        // });
+        const scrollTop = window.scrollY;
+        const background = parallaxBackgroundRef.current;
+        background.style.transform = `translateY(${(scrollTop - imgTop) * parallax}px)`;
     }
     
     function imgFadeIn(){
+        const img = imgRef.current
+        heightToWidthRatio.current = img.offsetHeight / img.offsetWidth
         handleWindowResize()
         handleScroll()
-        const img = imgRef.current
+        imgHeight.current = img.offsetHeight
+        
         img.classList.remove("fadeOut")
         img.classList.add("fadeIn")
     }
@@ -90,6 +105,16 @@ export default function ParallaxBackground(props){
                 >
                 </img>
             </div>
+                {
+                    text
+                    ?
+                    <div className='background-header-container'>
+                        <h1 className='background-header'>
+                            {text}
+                        </h1>
+                    </div>
+                    :''
+                }
         </div>
     )
 
