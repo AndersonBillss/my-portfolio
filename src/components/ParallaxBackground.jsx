@@ -79,8 +79,11 @@ export default function ParallaxBackground(props){
     function imgFadeIn(){
         const img = imgRef.current
         heightToWidthRatio.current = img.offsetHeight / img.offsetWidth
-        handleWindowResize()
-        handleScroll()
+        setTimeout(() => {
+            handleWindowResize()
+            handleScroll()
+        },200)
+
         imgHeight.current = img.offsetHeight
         
         img.classList.remove("fadeOut")
