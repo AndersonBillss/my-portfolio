@@ -22,6 +22,9 @@ export default function Home(){
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll)
+        setTimeout(() => {
+            handleScroll()
+        },400)
         return() => {
             window.removeEventListener('scroll', handleScroll)
         }
@@ -119,7 +122,7 @@ export default function Home(){
                     }
                 </ul>
 
-                <p> I have a passion for coding, and a strong work ethic. I would love an opportunity to use my skills in an externship. Reach out to me at anderson@thebillsfamily.com and check out my projects page to see what I have worked on.</p>
+                <p> I have a passion for coding, and a strong work ethic. I would love an opportunity to use my skills in an externship. Reach out to me at anderson@thebillsfamily.com and check out my <a className="button" href="/projects">projects page</a> to see what I have worked on.</p>
 
             </div>
         </div>

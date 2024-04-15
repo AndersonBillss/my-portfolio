@@ -14,9 +14,10 @@
 body{
   height: 100%;
   background-color: var(--main-background-color);
+  font-family: 'Roboto', sans-serif;
 }
 *{
-  color: var(--main-text-color)
+  color: var(--main-text-color);
 }
 .main-content{
   padding: 50px;
@@ -30,6 +31,23 @@ body{
 a{
   text-decoration: none;
   color: var(--card-text-color);
+}
+p{
+  font-size: 18px;
+  line-height: 25px;
+}
+p a{
+  background-color: var(--highlight-color);
+  color: var(--card-background-color);
+  padding: 2px 7px 3px 7px;
+  margin: 0 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-wrap: nowrap;
+}
+a i{
+  color: var(--card-background-color);
+  margin-left: 5px;
 }
 
 .nav{
@@ -123,6 +141,8 @@ a{
   color: black;
   border-radius: 5px;
   padding: 5px 10px;
+  display: flex;
+  width: fit-content;
 }
 
 

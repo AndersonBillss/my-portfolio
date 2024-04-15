@@ -29,7 +29,7 @@ export default function Projects(){
             const scrollBottom = scrollTop + window.innerHeight
 
             const elementTop = element.offsetTop
-            const elementBottom = elementTop + 400
+            const elementBottom = elementTop + element.offsetHeight
             
 
             if(scrollBottom > elementBottom){
