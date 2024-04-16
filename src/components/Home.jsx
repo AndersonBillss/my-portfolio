@@ -125,7 +125,7 @@ export default function Home(){
                 </ul>
 
                 <p>
-                    I have a passion for coding, and a strong work ethic. I would love an opportunity to use my skills in an externship and gain real-world experience. Please reach out to me at anderson@thebillsfamily.com.   You can view my projects at my<a className="button" href="/projects">projects page</a>, and make sure to check out my <a className="button" href="/projects">Github page<i className="fa-solid fa-arrow-up-right-from-square"></i></a>.
+                    I have a passion for coding, and a strong work ethic. I would love an opportunity to use my skills in an externship and gain real-world experience. Please reach out to me at anderson@thebillsfamily.com.   You can view my projects at my<a className="button" href="/projects">projects page</a>, and make sure to check out my <a className="button" target="_" href="https://github.com/AndersonBillss">Github<i className="fa-solid fa-arrow-up-right-from-square"></i></a>.
                 </p>
 
             </div>
