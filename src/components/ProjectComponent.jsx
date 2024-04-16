@@ -10,7 +10,7 @@ export default function ProjectComponent( props ){
                     <p>{info.description}</p>
                 </div>
 
-                <a href={info.link} className="projectLink button" target="_blank">See Project<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href={info.link} className="projectLink button" target="_blank">See Project<i className="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div className="project-img" style={{backgroundImage: `url(${info.img})`}}>
                 <div className="project-img-shadow"></div>

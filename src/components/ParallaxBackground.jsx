@@ -82,12 +82,12 @@ export default function ParallaxBackground(props){
         setTimeout(() => {
             handleWindowResize()
             handleScroll()
-        },200)
+                    
+            img.classList.remove("fadeOut")
+            img.classList.add("fadeIn")
+        },100)
 
         imgHeight.current = img.offsetHeight
-        
-        img.classList.remove("fadeOut")
-        img.classList.add("fadeIn")
     }
 
     return(

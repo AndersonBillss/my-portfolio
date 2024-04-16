@@ -29,10 +29,10 @@ export default function Projects(){
             const scrollBottom = scrollTop + window.innerHeight
 
             const elementTop = element.offsetTop
-            const elementBottom = elementTop + element.offsetHeight
+            const elementMiddle = elementTop + (element.offsetHeight/2)
             
 
-            if(scrollBottom > elementBottom){
+            if(scrollBottom > elementMiddle){
                 element.classList.remove('fadeOut') 
                 element.classList.add('fadeIn')
             }
@@ -56,19 +56,19 @@ export default function Projects(){
         },
         {
             title: 'Golf Score App',
-            description: 'This is a golf score app pulling from an api using vanilla javaScript.',
+            description: 'This is a golf score app.  It pulls from an API using vanilla javaScript.',
             link: 'https://andersonbillss.github.io/Golf-Score-App/',
             img: GolfScorePng
         },
         {
-            title: 'To do list app',
+            title: 'To Do List App',
             description: 'This robust to do list app was created using vanilla javaScript',
             link: 'https://andersonbillss.github.io/toDoListApp/',
             img: ToDoListPng
         },
         {
             title: 'React Game App',
-            description: 'This is an react app with several games, displaying my ability to code complex logic systems.',
+            description: 'This is a react app with several games.  It displays my ability to code complex logic systems.',
             link: 'https://react-game-project-dxrwofvh4-anderson-bills-projects.vercel.app/',
             img: ReactGamePng
         },

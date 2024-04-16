@@ -29,16 +29,18 @@ export default function Home(){
             window.removeEventListener('scroll', handleScroll)
         }
     },[])
+
+
     function handleScroll(){
         const listItems = document.getElementsByClassName("subject-item")
         const windowBottom = window.scrollY + window.innerHeight
 
         const list = listRef.current
-        const listBottom = list.offsetTop + list.offsetHeight
+        const listMiddle = list.offsetTop + (list.offsetHeight / 2)
 
         const listImg = listItems[0].querySelector("img")
 
-        if(windowBottom > listBottom && listImg.complete){
+        if(windowBottom > listMiddle && listImg.complete){
             for(let i=0; i<listItems.length; i++){
                 const listItem = listItems[i]
                 setTimeout(() => {
@@ -105,7 +107,7 @@ export default function Home(){
 
                 <h1 className="main-header">About Me</h1>
 
-                <p>I am currently a student at Mtech (Mountainland Technical College), enrolled in their Web Programming and Development course where industry professionals work with students. I spend 3 hours every school day in this program, and I spend time at home improving my skills. This program has taught me each of the following:</p>
+                <p>I am currently a student at Mtech (Mountainland Technical College), enrolled in their Web Programming and Development program, where industry professionals work with students. Most of my time is spent in classes, working on projects, and improving my skills.  From this program, I have learned:</p>
 
                 <ul ref={listRef} className="subject-list">
                     {
@@ -122,7 +124,9 @@ export default function Home(){
                     }
                 </ul>
 
-                <p> I have a passion for coding, and a strong work ethic. I would love an opportunity to use my skills in an externship. Reach out to me at anderson@thebillsfamily.com and check out my <a className="button" href="/projects">projects page</a> to see what I have worked on.</p>
+                <p>
+                    I have a passion for coding, and a strong work ethic. I would love an opportunity to use my skills in an externship and gain real-world experience. Please reach out to me at anderson@thebillsfamily.com.   You can view my projects at my<a className="button" href="/projects">projects page</a>, and make sure to check out my <a className="button" href="/projects">Github page<i className="fa-solid fa-arrow-up-right-from-square"></i></a>.
+                </p>
 
             </div>
         </div>

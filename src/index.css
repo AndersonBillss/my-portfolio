@@ -1,15 +1,29 @@
 
 :root{
 
-  --main-background-color: rgb(66, 66, 66);
+/*   --main-background-color: #2a3330;
+  --card-background-color: #106164;
+  --highlight-color: #d7af8b;
+  --main-text-color: #d0e7e1; */
 
-  --nav-text-color: rgb(241, 240, 219);
-  --highlight-color: rgb(0, 252, 84);
-  
-  --card-background-color: rgb(13, 50, 23);
-  --main-text-color: lightgray;
+/*   --card-background-color: #05396b;
+  --main-background-color: #83b5b4;
+  --highlight-color: #d85537;
+  --main-text-color: #fff1ce; */
 
-  --project-height: 400px;
+/*   --card-background-color: #002e1c;
+  --main-background-color: #425f51;
+  --highlight-color: #d85112;
+  --main-text-color: #ffdfc9; */
+
+  --card-background-color: #0d3217;
+  --main-background-color: #424242;
+  --highlight-color: #00fc54;
+  --main-text-color: #f1f0db;
+
+  --nav-text-color: var(--main-text-color);
+
+  --project-height: 500px;
 }
 body{
   height: 100%;
@@ -32,6 +46,7 @@ a{
   text-decoration: none;
   color: var(--card-text-color);
 }
+
 p{
   font-size: 18px;
   line-height: 25px;
@@ -46,8 +61,11 @@ p a{
   text-wrap: nowrap;
 }
 a i{
-  color: var(--card-background-color);
   margin-left: 5px;
+  color: var(--card-background-color);
+}
+a{
+  color: var(--card-background-color);
 }
 
 .nav{
@@ -57,6 +75,9 @@ a i{
   background-color: var(--card-background-color);
   color: var(--nav-text-color);
 }
+.nav *{
+  color: var(--nav-text-color)
+}
 .links{
   display: flex;
   align-items: center;
@@ -65,9 +86,7 @@ a i{
   margin: 0 15px;
   font-weight: normal;
 }
-.links a{
-  color: var(--nav-text-color)
-}
+
 
 
 .project{
@@ -97,7 +116,7 @@ a i{
 .fadeIn {
   visibility: visible;
   opacity: 1;
-  transition: visibility 0s linear 0s, opacity 1000ms;
+  transition: visibility 0s linear 0s, opacity 2000ms;
 }
 
 .selected-link{
@@ -138,7 +157,6 @@ a i{
   text-align: center;
   font-weight: bold;
   background-color: var(--highlight-color);
-  color: black;
   border-radius: 5px;
   padding: 5px 10px;
   display: flex;
@@ -173,7 +191,7 @@ a i{
   margin: 15px;
   padding: 15px 30px;
   border-radius: 10px;
-  background-color: antiquewhite;
+  background-color: var(--nav-text-color);
 }
 .subject-item div {
   color: var(--card-background-color);
@@ -227,7 +245,11 @@ img.fadeIn{
   margin: 15px;
 }
 
-
+@media(min-width: 1500px) {
+  .parallax-background-container{
+    height: 700px;
+  }
+}
 @media(max-width: 800px) {
   .project{
     display: flex;
@@ -255,6 +277,9 @@ img.fadeIn{
     border-bottom: none;
     border-right: 3px var(--highlight-color) solid;
     padding-bottom: 0;
+  }
+  .project-img{
+    height: calc(var(--project-height)/2);
   }
 }
 
